@@ -21,10 +21,8 @@ const Footer = () => {
 
         {/* 3. Social Media */}
         <div className="footer-section social-area">
-          <a href="#" aria-label="Facebook"><FaFacebookF /></a>
-          <a href="#" aria-label="Twitter"><FaTwitter /></a>
-          <a href="#" aria-label="Instagram"><FaInstagram /></a>
-          <a href="#" aria-label="Linkedin"><FaLinkedinIn /></a>
+          <a href="https://www.instagram.com/piyushjaiswal706" aria-label="Instagram"><FaInstagram /></a>
+          <a href="https://www.linkedin.com/in/piyush-jaiswal-41288728a#" aria-label="Linkedin"><FaLinkedinIn /></a>
         </div>
       </div>
     </footer>
