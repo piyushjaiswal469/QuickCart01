@@ -1,17 +1,5 @@
 /* Sidebar Foundation */
-.cart-sidebar {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 100%;
-  max-width: 420px;
-  height: 100%;
-  background-color: #f5f7f9; /* Modern soft gray */
-  z-index: 1000;
-  transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  display: flex;
-  flex-direction: column;
-}
+
 
 .cart-sidebar.open { right: 0; }
 
@@ -165,13 +153,38 @@
   font-size: 12px;
 }
 
-/* Floating Checkout Button */
+/* Sidebar Foundation */
+.cart-sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  max-width: 420px;
+  height: 100vh; /* Use vh to ensure it fills the viewport */
+  background-color: #f5f7f9;
+  z-index: 1000;
+  transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column; /* Header, Body, and Footer stack vertically */
+}
+
+/* The Body Fix */
+.cart-body {
+  flex: 1;                
+  overflow-y: auto;       
+  padding: 16px;         
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure the footer stays at the bottom and doesn't shrink */
 .checkout-footer {
+  flex-shrink: 0;         /* Prevents the footer from disappearing/squeezing */
   background: white;
   padding: 20px;
   box-shadow: 0 -10px 15px -3px rgba(0,0,0,0.05);
+  z-index: 10;
 }
-
 .pay-button {
   width: 100%;
   background: #10b981;

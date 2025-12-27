@@ -100,7 +100,7 @@ const CartSidebar = ({ isOpen, onClose, onCheckout }) => {
           </div>
         )}
       </div>
-    </>
+    </> 
   );
 };
 
