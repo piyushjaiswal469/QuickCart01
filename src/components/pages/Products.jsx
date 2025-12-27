@@ -19,7 +19,7 @@ function Products() {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/category");
+        const response = await fetch("https://quickcart-02mk.onrender.com/api/category");
         const result = await response.json();
         if (result.success) setCategories(result.categories);
       } catch (error) { console.error(error); }
@@ -31,12 +31,12 @@ function Products() {
   useEffect(() => {
     if (searchTerm) {
       setActiveCategory(null);
-      fetchProducts(`http://localhost:5000/api/products?search=${searchTerm}`);
+      fetchProducts(`https://quickcart-02mk.onrender.com/api/products?search=${searchTerm}`);
     } else if (categories.length > 0) {
       const match = categories.find((c) => c._id === categoryId);
       if (match) {
         setActiveCategory(match);
-        fetchProducts(`http://localhost:5000/api/products?categoryId=${categoryId}`);
+        fetchProducts(`https://quickcart-02mk.onrender.com/api/products?categoryId=${categoryId}`);
       } else if (!categoryId) {
         navigate(`/cn/${slugify(categories[0].name)}/cid/${categories[0]._id}`, { replace: true });
       }

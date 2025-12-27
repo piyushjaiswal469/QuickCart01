@@ -17,12 +17,12 @@ const ProductDetail = () => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const res = await fetch(`http://localhost:5000/api/products/${id}`);
+        const res = await fetch(`https://quickcart-02mk.onrender.com/api/products/${id}`);
         const result = await res.json();
         if (result.success) {
           setProduct(result.data);
           const catId = typeof result.data.category === "object" ? result.data.category._id : result.data.category;
-          const suggRes = await fetch(`http://localhost:5000/api/products?categoryId=${catId}`);
+          const suggRes = await fetch(`https://quickcart-02mk.onrender.com/api/products?categoryId=${catId}`);
           const suggResult = await suggRes.json();
           setSuggestions(suggResult.data.filter(p => p._id !== id).slice(0, 6));
         }

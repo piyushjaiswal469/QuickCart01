@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { IoClose, IoBagHandleOutline, IoChevronForward } from "react-icons/io5";
 import "../css/OrderPanel.css";
 
-const API_BASE_URL = "http://localhost:5000/api/orders";
+const API_BASE_URL = "https://quickcart-02mk.onrender.com/api/orders";
 
 export default function OrderPanel({ open, onClose }) {
   const [orders, setOrders] = useState([]);

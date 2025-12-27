@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom"; // 1. Import Link
 import "../css/LoginModal.css";
 
-const API_BASE_URL = "http://localhost:5000/api/auth";
+const API_BASE_URL = "https://quickcart-02mk.onrender.com/api/auth";
 
 export default function LoginModal({
   open = true,

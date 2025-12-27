@@ -17,7 +17,7 @@ const AllProducts = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/products");
+      const response = await fetch("https://quickcart-02mk.onrender.com/api/products");
       const result = await response.json();
       if (result.success && result.data) {
         setProducts(result.data);
@@ -42,7 +42,7 @@ const AllProducts = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Move this product to trash?")) {
       try {
-        const res = await fetch(`http://localhost:5000/api/products/${id}`, { method: "DELETE" });
+        const res = await fetch(`https://quickcart-02mk.onrender.com/api/products/${id}`, { method: "DELETE" });
         const data = await res.json();
         if (data.success) {
           setProducts(products.filter((p) => p._id !== id));
