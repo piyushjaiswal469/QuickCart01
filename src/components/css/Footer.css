@@ -1,0 +1,97 @@
+/* Footer.css */
+
+.quick-footer {
+  background-color: #ffffff;
+  border-top: 1px solid #f0f0f0;
+  padding: 32px 0;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 1. Copyright Text */
+.copyright-area p {
+  color: #94a3b8;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.brand-accent {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+/* 2. Central Links */
+.links-area {
+  display: flex;
+  gap: 32px;
+}
+
+.links-area a {
+  text-decoration: none;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.links-area a:hover {
+  color: #10b981; /* Brand Green */
+}
+
+/* 3. Social Icons */
+.social-area {
+  display: flex;
+  gap: 16px;
+}
+
+.social-area a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background-color: #f8fafc;
+  color: #475569;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+.social-area a:hover {
+  background-color: #10b981;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* --- Mobile Responsive --- */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .links-area {
+    gap: 20px;
+    order: 1; /* Puts links first on mobile */
+  }
+
+  .social-area {
+    order: 2;
+  }
+
+  .copyright-area {
+    order: 3;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 20px;
+    width: 100%;
+  }
+}

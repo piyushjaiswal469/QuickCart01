@@ -1,0 +1,196 @@
+/* Sidebar Foundation */
+.cart-sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  max-width: 420px;
+  height: 100%;
+  background-color: #f5f7f9; /* Modern soft gray */
+  z-index: 1000;
+  transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-sidebar.open { right: 0; }
+
+.cart-header {
+  background: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-left h3 {
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: #1a202c;
+  margin: 0;
+}
+
+/* Delivery ETA Banner */
+.delivery-banner {
+  background: #ffffff;
+  padding: 12px 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.eta-badge {
+  background: #000;
+  color: #fff;
+  font-weight: 800;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+}
+
+/* Item Card Design */
+.cart-item-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  gap: 16px;
+  margin-bottom: 12px;
+  transition: transform 0.2s;
+}
+
+.item-img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  background: #f8fafc;
+  border-radius: 10px;
+}
+
+.item-info { flex: 1; }
+
+.item-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0 0 2px 0;
+}
+
+.item-qty-text {
+  font-size: 12px;
+  color: #718096;
+  margin-bottom: 10px;
+}
+
+.item-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-price { font-weight: 800; color: #1a202c; }
+
+/* Stepper Component */
+.stepper {
+  background: #10b981;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+  color: white;
+}
+
+.stepper button {
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.stepper button:hover { background: rgba(0,0,0,0.1); }
+
+.stepper span { width: 20px; text-align: center; font-size: 14px; font-weight: 700; }
+
+/* Bill Details Card */
+.bill-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.bill-card h5 { margin: 0 0 15px 0; font-size: 14px; color: #4a5568; text-transform: uppercase; letter-spacing: 0.5px; }
+
+.bill-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #4a5568;
+}
+
+.grand-total {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px dashed #cbd5e0;
+  color: #1a202c !important;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.free-tag { color: #10b981; font-weight: 700; }
+
+/* Safety Footer */
+.safety-footer {
+  text-align: center;
+  padding: 20px;
+  color: #a0aec0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 12px;
+}
+
+/* Floating Checkout Button */
+.checkout-footer {
+  background: white;
+  padding: 20px;
+  box-shadow: 0 -10px 15px -3px rgba(0,0,0,0.05);
+}
+
+.pay-button {
+  width: 100%;
+  background: #10b981;
+  color: white;
+  border: none;
+  padding: 16px 20px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.pay-button:hover { background: #059669; }
+
+.pay-left { display: flex; flex-direction: column; align-items: flex-start; }
+.pay-left .price { font-weight: 800; font-size: 18px; }
+.pay-left .items-count { font-size: 10px; font-weight: 700; opacity: 0.9; }
+
+.pay-right { display: flex; align-items: center; gap: 5px; font-weight: 800; font-size: 15px; }
+.pay-right .chevron { font-size: 22px; line-height: 0; }

@@ -1,0 +1,227 @@
+/* --- Global Wrapper --- */
+.admin-page-wrapper {
+  padding: 32px;
+  background-color: #f9fafb;
+  min-height: 100vh;
+}
+
+/* --- Header Section --- */
+.admin-header-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.header-text h1 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.5px;
+}
+
+.header-text p {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.add-prod-btn {
+  background: #10b981;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+
+.add-prod-btn:hover { background: #059669; transform: translateY(-1px); }
+
+/* --- Search & Control Bar --- */
+.admin-controls-card {
+  background: white;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.search-pill {
+  flex: 1;
+  background: #f3f4f6;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  height: 48px;
+}
+
+.search-pill input {
+  background: transparent;
+  border: none;
+  width: 100%;
+  padding-left: 12px;
+  font-size: 14px;
+  outline: none;
+}
+
+.stats-badge {
+  background: #eef2ff;
+  color: #4f46e5;
+  padding: 6px 12px;
+  border-radius: 99px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* --- Modern Grid Layout --- */
+.modern-product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.modern-admin-card {
+  background: white;
+  border-radius: 20px;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.modern-admin-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.card-image-section {
+  height: 150px;
+  background: #f9fafb;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card-image-section img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.promo-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #3b82f6;
+  color: white;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.card-body {
+  padding: 20px;
+  flex: 1;
+}
+
+.category-tag {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #94a3b8;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.product-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.product-meta {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 16px;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.current-price {
+  font-size: 20px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.old-price {
+  font-size: 14px;
+  text-decoration: line-through;
+  color: #9ca3af;
+  margin-left: 6px;
+}
+
+.stock-status {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.in-stock { background: #ecfdf5; color: #10b981; }
+
+.card-footer-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid #f3f4f6;
+}
+
+.action-icon {
+  padding: 12px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  color: #6b7280;
+}
+
+.action-icon.edit:hover { background: #eff6ff; color: #2563eb; }
+.action-icon.delete:hover { background: #fef2f2; color: #dc2626; }
+
+/* Loader Animation */
+.admin-loader {
+  display: flex;
+  justify-content: center;
+  padding: 100px;
+}
+
+.admin-loader span {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #e5e7eb;
+  border-top-color: #10b981;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
